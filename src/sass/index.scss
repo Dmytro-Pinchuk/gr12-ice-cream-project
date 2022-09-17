@@ -1,10 +1,8 @@
 @import './common';
-@import './example';
 @import './utils/vars';
 @import './utils/hidden';
-
+@import './utils/mixins';
 @import './components/components';
-
 @import './layouts/header';
 @import './layouts/hero';
 @import './layouts/products';
