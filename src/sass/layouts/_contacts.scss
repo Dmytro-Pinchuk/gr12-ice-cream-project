@@ -1,0 +1,133 @@
+$button-color: #F8D24E;
+$button-hover-color: #0A8817;
+$button-disable-color: #ABABAB;
+
+.franchise__section {
+    background-color: #84A178;
+}
+.container {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 39px;
+}
+
+.franchise {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px;
+    padding: 0px;
+
+    &__card {
+        margin-bottom: 20px;
+        padding: 40px 32px;
+        width: 100%;
+        max-width: 280px;
+        height: 412px;
+        background: #FCFCFC;
+        box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+        border-radius: 24px;
+    }
+
+    &__item {
+        padding: 0;
+        margin-bottom: 48px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__title {
+        text-align: center;
+        width: 80px;
+        height: 16px;
+        background-color: #F8D24E;
+        border-radius: 4px;
+        margin: 0;
+        margin-bottom: 20px;
+
+        &--width {
+            width: 130px;
+        }
+    }
+
+    &__address-city {
+        margin-bottom: 8px;
+    }
+
+    &__address-link {
+        text-decoration: none;
+        color: #D6936D;
+    }
+
+    &__schedule-days {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 1.86;
+    }
+
+    &__schedule-time {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 1.86;
+        color: #ABABAB;
+    }
+
+    &__contacts-link {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 1.5;
+        text-decoration: none;
+        color: #131313;
+    }
+
+    &__button {
+        display: block;
+        text-align: center;
+        margin: 0 auto;
+        width: 196px;
+        height: 42px;
+        border-radius: 10px;
+
+        &--location {
+            margin-bottom: 16px;
+            background-color: $button-color;
+            border: none;
+            color: #000;
+
+            &:hover {
+              background-color: $button-hover-color;
+            }
+            &:focus {
+                background-color:$button-hover-color;
+                color: #ffffff;
+            }
+            &:disabled {
+                color: #000;
+                background-color: $button-disable-color;
+            }
+        }
+
+        &--frahchise {
+            background-color: transparent;
+            border-color: $button-color;
+
+            &:hover {
+                border-color: $button-hover-color;
+            }
+        
+            &:focus {
+                border-color: $button-hover-color;
+                color: #ffffff;
+            }
+        
+            &:disabled {
+                color: #000;
+                border-color: $button-disable-color;
+            }
+        }
+    }
+}
