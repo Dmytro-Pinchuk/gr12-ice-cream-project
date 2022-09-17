@@ -1,24 +1,14 @@
-$button-color: #F8D24E;
-$button-hover-color: #0A8817;
-$button-disable-color: #ABABAB;
 
-.franchise__section {
-    background-color: #84A178;
-}
-.container {
-    padding-left: 20px;
-    padding-right: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 39px;
-}
+.contacts {
+    background-color: var(--main-body-color);
 
-.franchise {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0px;
-    padding: 0px;
+    &__box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0px;
+        padding: 0px;
+    }
 
     &__card {
         margin-bottom: 20px;
@@ -55,6 +45,10 @@ $button-disable-color: #ABABAB;
     }
 
     &__address-city {
+        font-family: inherit;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 1.86;
         margin-bottom: 8px;
     }
 
@@ -64,12 +58,14 @@ $button-disable-color: #ABABAB;
     }
 
     &__schedule-days {
+        font-family: inherit;
         font-weight: 500;
         font-size: 12px;
         line-height: 1.86;
     }
 
     &__schedule-time {
+        font-family: inherit;
         font-weight: 500;
         font-size: 12px;
         line-height: 1.86;
@@ -77,15 +73,22 @@ $button-disable-color: #ABABAB;
     }
 
     &__contacts-link {
+        font-family: inherit;
         font-weight: 500;
         font-size: 12px;
         line-height: 1.5;
         text-decoration: none;
-        color: #131313;
+        color: var(--second-body-color);
     }
 
     &__button {
-        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: inherit;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 1.29;
         text-align: center;
         margin: 0 auto;
         width: 196px;
@@ -94,39 +97,39 @@ $button-disable-color: #ABABAB;
 
         &--location {
             margin-bottom: 16px;
-            background-color: $button-color;
+            background-color: var(--button-color);
             border: none;
             color: #000;
 
             &:hover {
-              background-color: $button-hover-color;
+              background-color: var(--button-hover-color);
             }
             &:focus {
-                background-color:$button-hover-color;
+                background-color: var(--button-hover-color);
                 color: #ffffff;
             }
             &:disabled {
                 color: #000;
-                background-color: $button-disable-color;
+                background-color: var(--button-disable-color);
             }
         }
 
         &--frahchise {
             background-color: transparent;
-            border-color: $button-color;
+            border-color: var(--button-color);
 
             &:hover {
-                border-color: $button-hover-color;
+                border-color: var(--button-hover-color);
             }
         
             &:focus {
-                border-color: $button-hover-color;
+                border-color: var(--button-hover-color);
                 color: #ffffff;
             }
         
             &:disabled {
                 color: #000;
-                border-color: $button-disable-color;
+                border-color: var(--button-disable-color);
             }
         }
     }
