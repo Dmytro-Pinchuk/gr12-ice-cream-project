@@ -1,6 +1,6 @@
 
 .contacts {
-    background-color: var(--main-body-color);
+    background-color: $main-body-color;
 
     &__box {
         display: flex;
@@ -78,7 +78,7 @@
         font-size: 12px;
         line-height: 1.5;
         text-decoration: none;
-        color: var(--second-body-color);
+        color: #131313;
     }
 
     &__button {
@@ -97,39 +97,39 @@
 
         &--location {
             margin-bottom: 16px;
-            background-color: var(--button-color);
+            background-color: $button-color;
             border: none;
             color: #000;
 
             &:hover {
-              background-color: var(--button-hover-color);
+              background-color: $button-hover-color;
             }
             &:focus {
-                background-color: var(--button-hover-color);
+                background-color: $button-hover-color;
                 color: #ffffff;
             }
             &:disabled {
                 color: #000;
-                background-color: var(--button-disable-color);
+                background-color: $button-disable-color;
             }
         }
 
         &--frahchise {
             background-color: transparent;
-            border-color: var(--button-color);
+            border-color: $button-color;
 
             &:hover {
-                border-color: var(--button-hover-color);
+                border-color: $button-hover-color;
             }
         
             &:focus {
-                border-color: var(--button-hover-color);
+                border-color: $button-hover-color;
                 color: #ffffff;
             }
         
             &:disabled {
                 color: #000;
-                border-color: var(--button-disable-color);
+                border-color: $button-disable-color;
             }
         }
     }
