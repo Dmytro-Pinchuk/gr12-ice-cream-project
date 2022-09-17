@@ -1,0 +1,1 @@
+{"mappings":"AACmB,IAAIA,OAAO,YAAa,CACnCC,WAAY,CACVC,GAAI","sources":["src/customer-reviews.js"],"sourcesContent":["\n      var swiper = new Swiper(\".mySwiper\", {\n        pagination: {\n          el: \".swiper-pagination\",\n        },\n      });\n"],"names":["Swiper","pagination","el"],"version":3,"file":"index.7f8dbb3c.js.map"}
