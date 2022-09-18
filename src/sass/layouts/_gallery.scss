@@ -1,9 +1,23 @@
+.gallery{
+    position: relative;
+    top:-24px;
+    left:center;
+    z-index: 10;
+    @include tablet{
+        top: -164px;
+    }
+    @include desktop{
+        top:-94px;
+        }
+        &__wrap{
+            position:absolute;
+        }
+}
 .wrapper{
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
+    position:absolute;
     min-height: 100%;
     width: 100%;
+    
 }
 .swiper-container {
     display: flex;
