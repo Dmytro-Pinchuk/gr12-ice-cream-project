@@ -20,9 +20,14 @@ new Swiper('.image-slider',{
     loopedSlides: 1,
 
     spaceBetween: 40,
-    effect:'flip',
-    flipeEffect:{
-        slideShadows:true,
-        limitRotation:true
+    // effect:'flip',
+    // flipeEffect:{
+    //     slideShadows:true,
+    //     limitRotation:true
+    // },
+    effect:'fade',
+    fadeEffect:{
+        crossFade:true
     },
+
 });
