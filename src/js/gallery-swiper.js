@@ -19,5 +19,10 @@ new Swiper('.image-slider',{
     loop: true,
     loopedSlides: 1,
 
-    spaceBetween: 50,
+    spaceBetween: 40,
+    effect:'flip',
+    flipeEffect:{
+        slideShadows:true,
+        limitRotation:true
+    },
 });
