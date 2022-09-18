@@ -12,7 +12,7 @@ new Swiper('.image-slider',{
     // },
     // simulateTouch: true,
     // touchRatio: 2,
-    grabCurser: true,
+    // grabCurser: true,
     // mousewheel:{
     //     sensitivity:1,
     // },
