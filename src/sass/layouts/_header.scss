@@ -1,0 +1,142 @@
+button {
+  font-family: inherit;
+  border: transparent;
+  padding: 0;
+}
+
+.header {
+  position: absolute;
+  width: 100%;
+  background-color: $main-body-color;
+  padding-top: 12px;
+  padding-bottom: 0px;
+
+  @include tablet {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-left: auto;
+  margin-right: auto;
+  /* outline: 2px solid rgb(0, 255, 76); */
+
+  @include mobile {
+    width: 480px;
+  }
+
+  @include tablet {
+    width: 768px;
+  }
+
+  @include desktop {
+    width: 1200px;
+  }
+}
+
+.nav{
+  display: flex;
+  align-items: center;
+
+  &__link-logo{
+    margin-right: 0px;
+    
+    @include tablet {
+      margin-right: 0px;
+    }
+  
+    @include desktop {
+    margin-right: 269px;
+    }
+  
+  }
+}
+
+
+
+.header-navigation {
+  display: none;
+
+  @include desktop {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.header-nav {
+  display: flex;
+
+  &__item {
+    margin-right: 27px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__link {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: calc(20 / 16);
+    display: flex;
+    align-items: center;
+    color: $main-text-color;
+  }
+}
+
+.header-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-open-btn {
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  background-color: transparent;
+
+  @include desktop {
+    display: none;
+  }
+}
+
+.btn-buy {
+  display: none;
+
+  @include tablet {
+    display: block;
+    width: 152px;
+    height: 42px;
+    background: $button-color;
+    border-radius: 10px;
+    margin-left: 32px;
+
+    &>span {
+      margin-right: 7.23px;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: calc(17 / 14);
+      color: $second-text-color;
+    }
+  }
+
+}
+
+/* .is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+} */
+
+/* .no-scroll {
+  overflow: hidden;
+} */
+
