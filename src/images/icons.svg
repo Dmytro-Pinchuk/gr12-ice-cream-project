@@ -1,8 +1,8 @@
 <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <defs>
 <!-- Оптимізовані SVG подавати сюди -->
-  <symbol id="icon-pointer" viewBox="0 0 32 32">
-     <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="5.3333" d="M10.667 5.333l13.2 10.667-13.2 10.667"></path>
+  <symbol id="icon-pointer1" viewBox="0 0 32 32">
+    <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="5.3333" d="M10.667 5.333l13.2 10.667-13.2 10.667"></path>
   </symbol>
   <symbol id="icon-btn-more" viewBox="0 0 22 32">
     <path d="M2.864 0.019c-0.872 0.094-1.628 0.525-2.146 1.159l-0.005 0.006c-0.445 0.545-0.715 1.249-0.715 2.016 0 1.001 0.46 1.895 1.18 2.482l0.006 0.005 12.768 10.314-12.765 10.314c-0.726 0.591-1.186 1.485-1.186 2.487 0 0.765 0.269 1.468 0.717 2.018l-0.005-0.006c0.591 0.726 1.485 1.186 2.487 1.186 0.765 0 1.468-0.269 2.018-0.717l-0.006 0.005 15.83-12.8c0.726-0.591 1.186-1.485 1.186-2.486s-0.46-1.895-1.18-2.482l-0.006-0.005-15.83-12.8c-0.545-0.444-1.247-0.712-2.013-0.712-0.118 0-0.235 0.006-0.35 0.019l0.014-0.001z"></path>

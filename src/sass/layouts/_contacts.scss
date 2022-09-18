@@ -1,6 +1,20 @@
 
 .contacts {
     background-color: $main-body-color;
+    max-height: 1100px;
+
+    &__container {
+        max-height: 1100px;
+    }
+
+    &__wrap {
+        z-index: 1;
+        position: relative;
+        top:-25%;
+        left: 50%;
+        transform: translate(-50%, -25%);
+        margin-bottom: 39px;
+    }
 
     &__box {
         display: flex;
@@ -10,7 +24,7 @@
         padding: 0px;
     }
 
-    &__card {
+    &__card { 
         margin-bottom: 20px;
         padding: 40px 32px;
         width: 100%;
@@ -95,11 +109,21 @@
         height: 42px;
         border-radius: 10px;
 
+        transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        &:hover,
+        &:focus {
+            box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+            0px 1px 1px rgba(0, 0, 0, 0.14),
+            0px 2px 1px rgba(0, 0, 0, 0.2);
+        }
+
         &--location {
             margin-bottom: 16px;
             background-color: $button-color;
             border: none;
             color: #000;
+
+           
 
             &:hover {
               background-color: $button-hover-color;
@@ -114,7 +138,7 @@
             }
         }
 
-        &--frahchise {
+        &--franchise {
             background-color: transparent;
             border-color: $button-color;
 
@@ -132,5 +156,12 @@
                 border-color: $button-disable-color;
             }
         }
+
+    }
+
+    &__icon {
+        margin-left: 6px;
+        fill: currentColor;
+  
     }
 }
