@@ -13,9 +13,9 @@ new Swiper('.image-slider',{
     // simulateTouch: true,
     // touchRatio: 2,
     grabCurser: true,
-    mousewheel:{
-        sensitivity:1,
-    },
+    // mousewheel:{
+    //     sensitivity:1,
+    // },
     loop: true,
     loopedSlides: 1,
     keyboard:{
