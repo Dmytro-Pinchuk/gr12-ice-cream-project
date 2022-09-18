@@ -12,22 +12,26 @@ new Swiper('.image-slider',{
     // },
     // simulateTouch: true,
     // touchRatio: 2,
-    // grabCurser: true,
+    grabCurser: true,
     mousewheel:{
         sensitivity:1,
     },
     loop: true,
     loopedSlides: 1,
-
+    keyboard:{
+        enabled:true,
+        onlyInViewport:true
+    },
     spaceBetween: 40,
+    slideToClickedSlide: true,
     // effect:'flip',
     // flipeEffect:{
     //     slideShadows:true,
     //     limitRotation:true
     // },
-    effect:'fade',
-    fadeEffect:{
-        crossFade:true
-    },
+    // effect:'fade',
+    // fadeEffect:{
+    //     crossFade:true
+    // },
 
 });
