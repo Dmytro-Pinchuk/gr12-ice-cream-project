@@ -90,14 +90,16 @@
 }
 
 .hero__title--span {
+  font-family: 'Seymour One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 34;
+  line-height: 0.97;
+  text-transform: uppercase;
+  color: $main-text-color;
   @include tablet {
-    font-family: 'Seymour One';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16.2531px;
-    line-height: calc(13 / 16.2531);
-    text-transform: uppercase;
-    color: $main-text-color;
+    font-size: 24px;
+    line-height: 0.55;
   }
 }
 
