@@ -1,19 +1,27 @@
 
 .contacts {
     background-color: $main-body-color;
-    max-height: 1100px;
+    max-height: 100%;
 
     &__container {
-        max-height: 1100px;
+        max-height: 100%;
     }
 
     &__wrap {
         z-index: 1;
         position: relative;
-        top:-25%;
+        top: -25%;
         left: 50%;
         transform: translate(-50%, -25%);
         margin-bottom: 39px;
+
+        @include tablet {
+                @media screen and (min-width: 768px) {
+                    top:-25%;
+                    left: 50%;
+                    transform: translate(-50%, -40%);
+                }
+            }
     }
 
     &__box {
@@ -22,6 +30,15 @@
         align-items: center;
         margin: 0px;
         padding: 0px;
+
+        @include tablet {
+            @media screen and (min-width: 768px) {
+            flex-direction: row;
+            justify-content: center;
+            }
+        }
+
+
     }
 
     &__card { 
@@ -33,6 +50,20 @@
         background: #FCFCFC;
         box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
         border-radius: 24px;
+
+        @include tablet {
+            @media screen and (min-width: 768px) {
+                padding: 40px 24px;
+                width: 100%;
+                max-width: 224px;
+                height: 528px;
+                margin-right: 16px;
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+
     }
 
     &__item {
@@ -42,9 +73,22 @@
         &:last-child {
             margin-bottom: 0;
         }
+
+        @include tablet {
+            @media screen and (min-width: 768px) {
+                margin-bottom: 64px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
     }
 
     &__title {
+        font-family: inherit;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 1.86;
         text-align: center;
         width: 80px;
         height: 16px;
@@ -56,6 +100,14 @@
         &--width {
             width: 130px;
         }
+
+        @include tablet {
+            @media screen and (min-width: 768px) {
+                margin-bottom: 32px;
+                font-size: 16px;
+                height: 28px;
+            }
+        }
     }
 
     &__address-city {
@@ -64,6 +116,13 @@
         font-size: 12px;
         line-height: 1.86;
         margin-bottom: 8px;
+
+        @include tablet {
+            @media screen and (min-width: 768px) {
+                margin-bottom: 12px;
+                font-size: 14px;
+            }
+        }
     }
 
     &__address-link {
@@ -76,6 +135,12 @@
         font-weight: 500;
         font-size: 12px;
         line-height: 1.86;
+
+        @include tablet {
+            @media screen and (min-width: 768px) {
+                font-size: 14px;
+            }
+        }
     }
 
     &__schedule-time {
@@ -84,6 +149,11 @@
         font-size: 12px;
         line-height: 1.86;
         color: #ABABAB;
+        @include tablet {
+            @media screen and (min-width: 768px) {
+                font-size: 14px;
+            }
+        }
     }
 
     &__contacts-link {
@@ -93,6 +163,11 @@
         line-height: 1.5;
         text-decoration: none;
         color: #131313;
+        @include tablet {
+            @media screen and (min-width: 768px) {
+                font-size: 14px;
+            }
+        }
     }
 
     &__button {
@@ -110,6 +185,24 @@
         border-radius: 10px;
 
         transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+        @include tablet {
+            @media screen and (min-width: 768px) {
+                margin: 0;
+            }
+        }
+
+        &-flex{
+            @include tablet {
+               @media screen and (min-width: 768px) {
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: center;
+                }
+            }
+        }
+        
+
         &:hover,
         &:focus {
             box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
@@ -123,8 +216,6 @@
             border: none;
             color: #000;
 
-           
-
             &:hover {
               background-color: $button-hover-color;
             }
@@ -136,6 +227,13 @@
                 color: #000;
                 background-color: $button-disable-color;
             }
+
+            @include tablet {
+                @media screen and (min-width: 768px) {
+                    margin-right: 16px;
+                }
+            }
+
         }
 
         &--franchise {
