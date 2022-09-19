@@ -141,5 +141,8 @@
         }
       }
   }
+  .swiper-pagination-clickable .swiper-pagination-bullet {
+    cursor: inherit;
+  }
 }
 
