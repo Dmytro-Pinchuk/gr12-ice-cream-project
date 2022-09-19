@@ -1,118 +1,166 @@
 .footer {
   background-color: $main-body-color;
-}
-.footer__container {
-  @media screen and (min-width: 480px) {
-    display: flex;
+  @include desktop {
   }
-}
-.footer__title {
-  padding-right: 66px;
-  @media screen and (min-width: 480px) {
-    padding-right: 20px;
+  &__container {
+    margin-top: -1px;
+    @include tablet {
+      display: flex;
+      padding: 0 32px;
+    }
+    @include desktop {
+      padding: 0 16px;
+    }
   }
-}
-.footer__title-one {
-  margin-bottom: 16px;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 1.22;
-  text-transform: uppercase;
-  color: $main-text-color;
 
-  @media screen and (min-width: 480px) {
-    margin-bottom: 9px;
-    font-size: 26px;
-    line-height: 1.23;
+  &__title {
+    max-width: 234px;
+    @include tablet {
+      min-width: 352px;
+    }
+    @include desktop {
+      min-width: 504px;
+    }
   }
-  @media screen and (min-width: 768px) {
-    margin-bottom: 14px;
-    font-weight: 400;
-    font-size: 30px;
-    line-height: 1.23;
-  }
-}
-.footer__title-two {
-  margin-bottom: 42px;
-  font-weight: 700;
-  font-size: 34px;
-  line-height: 1.21;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: $main-text-color;
-
-  @media screen and (min-width: 480px) {
-    font-size: 48px;
-    line-height: 1.23;
-    letter-spacing: 0.06em;
-  }
-  @media screen and (min-width: 768px) {
-    font-size: 58px;
+  &__title-one {
+    margin-bottom: 16px;
+    font-weight: 700;
+    font-size: 18px;
     line-height: 1.22;
+    text-transform: uppercase;
+    color: $main-text-color;
+    @include tablet {
+      margin-bottom: 9px;
+      font-size: 26px;
+      line-height: 1.23;
+    }
+    @include desktop {
+      margin-bottom: 14px;
+      font-weight: 400;
+      font-size: 30px;
+      line-height: 1.23;
+    }
   }
-}
-.footer__social-list {
-  margin-bottom: 38px;
-  display: flex;
-  align-items: center;
-  justify-content: right;
-  gap: 28px;
-  @media screen and (min-width: 480px) {
-    gap: 30px;
+  &__title-two {
+    margin-bottom: 42px;
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 1.21;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: $main-text-color;
+    @include tablet {
+      margin-bottom: 32px;
+      font-size: 48px;
+      line-height: 1.23;
+      letter-spacing: 0.06em;
+    }
+    @include desktop {
+      margin-bottom: 54px;
+      font-size: 58px;
+      line-height: 1.22;
+    }
   }
-}
-.footer__social-item {
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-  background-color: $button-color;
-  justify-content: center;
-}
-.footer__social-item:hover {
-  width: 32px;
-  height: 32px;
-}
-.footer__social-item:focus {
-  width: 35px;
-  height: 35px;
-}
-.footer__social-icon {
-  fill: $main-body-color;
-}
-.footer__social-icon:hover,
-.footer__social-icon:focus {
-  fill: $main-text-color;
-}
+  &__social {
+    margin-left: auto;
+  }
+  &__social-list {
+    margin-top: 12px;
+    margin-bottom: 38px;
+    display: flex;
+    justify-content: right;
+    gap: 28px;
+    @include tablet {
+      gap: 30px;
+      margin-top: 68px;
+      margin-bottom: 32px;
+    }
+    @include desktop {
+      margin-top: 12px;
+      margin-bottom: 40px;
+    }
+  }
+  &__social-link {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background-color: $button-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-.footer__social-text,
-.footer__social-tel-link {
-  margin-bottom: 40px;
-  font-weight: 700;
-  font-size: 12px;
-  line-height: 1.8;
-  text-align: right;
-  @media screen and (min-width: 480px) {
-    font-size: 16px;
+    &:hover {
+      width: 32px;
+      height: 32px;
+    }
+    &:focus {
+      width: 35px;
+      height: 35px;
+    }
   }
-}
-.footer__social-text {
-  color: #131313;
-}
-.footer__social-tel-link {
-  letter-spacing: 0.02em;
-  color: #ffffff;
-}
-.footer__bottom {
-  padding-top: 16px;
-  padding-bottom: 62px;
-  border: 1px solid #e1e1e1;
-}
-.footer__bottom-text {
-  padding-left: 60px;
-  padding-right: 60px;
-  text-align: center;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.5;
-  color: #7a7a7a;
+  &__social-icon {
+    fill: $main-body-color;
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &__social-link:hover &__social-icon,
+  &__social-link:focus &__social-icon {
+    fill: $main-text-color;
+  }
+
+  &__social-text,
+  &__social-tel-link {
+    margin-bottom: 40px;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 1.8;
+    text-align: right;
+    @include tablet {
+      font-size: 14px;
+      line-height: 1.86;
+    }
+    @include desktop {
+      font-size: 16px;
+      line-height: 1.88;
+      letter-spacing: 0.02em;
+    }
+  }
+  &__social-text {
+    color: $second-text-color;
+  }
+  &__social-tel-link {
+    color: $main-text-color;
+  }
+  &__bottom {
+    padding-top: 16px;
+    padding-bottom: 62px;
+    border-top: 1px solid #e1e1e1;
+    @include tablet {
+      padding-top: 14px;
+      padding-bottom: 13px;
+    }
+    @include desktop {
+      padding-top: 12px;
+      padding-bottom: 11px;
+    }
+  }
+  &__bottom-text {
+    padding-left: 60px;
+    padding-right: 60px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #7a7a7a;
+    @include tablet {
+      line-height: 1.86;
+      letter-spacing: 0.02em;
+    }
+    @include desktop {
+      font-size: 12px;
+      line-height: 1.83;
+    }
+  }
 }
