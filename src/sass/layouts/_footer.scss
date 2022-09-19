@@ -105,11 +105,14 @@
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  &__social-link:hover &__social-icon,
-  &__social-link:focus &__social-icon {
+  &__social-link:hover &__social-icon {
+    transform: scale(0.9);
     fill: $main-text-color;
   }
-
+  &__social-link:focus &__social-icon {
+    transform: scale(1.1);
+    fill: $main-text-color;
+  }
   &__social-text,
   &__social-tel-link {
     margin-bottom: 40px;
