@@ -5,16 +5,19 @@
     background-repeat: no-repeat;
     background-position:center;
     background-size: cover;
-    padding: 186px 0px 394px 0px;
+    padding: 186px 20px 394px 20px;
+    width: 100%;
+    max-width: 100%;
     @include retina {
         background-image: url(../images/customer_reviews/reviews_backgorund480_2x.jpg);
     };
     @include mobile {
         width: 480px;
+        max-width:none;
     };
     @include tablet {
         width: 768px;
-        padding: 223px 0px 383px 0px;
+        padding: 223px 32px 383px 32px;
         background-image: url(../images/customer_reviews/reviews_backgorund768.jpg);
         @include retina {
             background-image: url(../images/customer_reviews/reviews_backgorund768_2x.jpg);
@@ -22,7 +25,7 @@
     } 
     @include desktop {
         width: 1200px;
-        padding: 456px 0px 196px 0px;   
+        padding: 456px 116px 196px 116px;   
         background-image: url(../images/customer_reviews/reviews_background1200.jpg);
         @include retina {
             background-image: url(../images/customer_reviews/reviews_background1200_2x.jpg);
@@ -32,8 +35,10 @@
   &__list{
     padding: 0;
       width: 100%;
+      max-width: 100%;
     @include mobile {
       width:480px;
+      max-width: none;
     }
     @include tablet {
       width: 768px;
@@ -64,14 +69,10 @@
     }
   }
   &__container {
-    display: flex;
+    display: inherit;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0 20px;
-    @include tablet{
-        width: 968px;
-    }
   }
   &__text {
     box-sizing: border-box;
@@ -90,14 +91,12 @@
         height: 138px;
         padding: 34px 74px 34px 73px;
         margin-bottom: 32px;
-        width: 705px;
         font-weight: 500;
         font-size: 14px;
         line-height: 1.86;
         letter-spacing: 0.04em;
       }
       @include desktop {
-        width: 968px;
         font-size: 16px;
       }
   }
