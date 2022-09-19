@@ -246,7 +246,10 @@
     margin-bottom: 20px;
     margin-top: 90px;
     padding: 0;
+    cursor: pointer;
+    @include desktop{
     cursor: inherit;
+}
 }
 
  .products__icon {
