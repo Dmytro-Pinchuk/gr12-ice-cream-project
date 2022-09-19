@@ -2,6 +2,7 @@
 .contacts {
     background-color: $main-body-color;
     min-height: 1100px;
+    padding-bottom: 60px;
 
     @include tablet {
         @media screen and (min-width: 768px) {
