@@ -4,9 +4,22 @@
 .link {
     text-decoration: none;
 }
-.conteiner {
+.container {
     width: 100%;
     padding-left: 20px;
     padding-right: 20px;
     margin: 0 auto;
+}
+
+button {
+    font-family: inherit;
+    border: transparent;
+    padding: 0;
+}
+
+image {
+    display: block;
+    /* width: 100%; */
+    max-width: 100%;
+    height: auto;
 }
