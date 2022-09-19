@@ -52,7 +52,7 @@ $modal-img-shadow-brown: 0px 8px 0px rgba(213, 117, 63, 0.7),0px 9px 19.726px rg
     background: rgba(0, 0, 0, 0.2);
     transform: scale(100%,100%);
 
-    overflow-y: scroll;
+    // overflow-y: scroll;
     z-index: 9998;
 
     transition-property: opacity, visibility,transform;
@@ -72,7 +72,7 @@ $modal-img-shadow-brown: 0px 8px 0px rgba(213, 117, 63, 0.7),0px 9px 19.726px rg
 }
 .modal-window
 {
-    position: absolute;
+    position: fixed;
     top: 10%;
     left: 50%;
 
