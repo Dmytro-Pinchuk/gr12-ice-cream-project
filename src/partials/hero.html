@@ -1,7 +1,8 @@
 <section class="section hero">
   <div class="container hero-container">
+    
     <div class="main-information">
-      <h1 class="hero__title">ice cream made with <span class="hero__title--span">passion</span></h1>
+      <h1 id="home" class="hero__title">ice cream made with <span class="hero__title--span">passion</span></h1>
 
       <ul class="hero-btn list">
         <li class="hero-btn__item">
@@ -17,14 +18,24 @@
       </ul>
 
       <div class="excerption-container">
-        <div class="excerption__img">
-          <img
-            class="excerption__img-many-ice-cream"
-            src="./images/many-ice-cream.png"
-            alt="ice cream"
-            width="100%"
-            height="auto"
-          />
+        <div class="excerption-img">
+          <picture>
+            <source
+              srcset="./images/hero/img-many-ice-cream-desk.png 1x, ./images/hero/img-many-ice-cream-desk-2x.png 2x"
+              media="(min-width:1200px)"
+            />
+            <source
+              srcset="./images/hero/img-many-ice-cream-tab.png 1x, ./images/hero/img-many-ice-cream-tab-2x.png 2x"
+              media="(min-width:768px)"
+            />
+            <img
+              class="excerption-img__many-ice-cream"
+              src="./images/hero/img-many-ice-cream-desk.png"
+              alt="ice cream"
+              width="100%"
+              height="100%"
+            />
+          </picture>
         </div>
 
         <div class="excerption">
