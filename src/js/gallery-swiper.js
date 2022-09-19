@@ -1,4 +1,4 @@
-new Swiper('.image-slider',{
+var swiper = new Swiper('.image-slider',{
     // pagination: {
     //     el: '.swiper-pagination',
     // },
@@ -10,9 +10,9 @@ new Swiper('.image-slider',{
     //     el: '.swiper-scrollbar',
     //     draggable: true
     // },
-    // simulateTouch: true,
-    // touchRatio: 2,
-    // grabCurser: true,
+    simulateTouch: true,
+    touchRatio: 2,
+    grabCurser: true,
     // mousewheel:{
     //     sensitivity:1,
     // },
@@ -22,16 +22,16 @@ new Swiper('.image-slider',{
         enabled:true,
         onlyInViewport:true
     },
-    spaceBetween: 40,
+    // spaceBetween: 40,
     slideToClickedSlide: true,
     // effect:'flip',
     // flipeEffect:{
     //     slideShadows:true,
     //     limitRotation:true
     // },
-    // effect:'fade',
-    // fadeEffect:{
-    //     crossFade:true
-    // },
+    effect:'fade',
+    fadeEffect:{
+        crossFade:true
+    },
 
 });
