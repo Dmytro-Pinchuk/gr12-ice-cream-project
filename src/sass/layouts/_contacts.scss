@@ -1,6 +1,54 @@
 
 .contacts {
     background-color: $main-body-color;
+    min-height: 1100px;
+
+    @include tablet {
+        @media screen and (min-width: 768px) {
+            min-height: 365px;
+        }
+}
+    @include desktop {
+        @media screen and (min-width: 1200px) {
+            min-height: 660px;
+        }
+    }
+
+    &__container {
+        width: 100%;
+        position: relative;
+
+        @media screen and (max-width: 767px) {
+            max-width: 480px;
+        }
+    }
+
+    &__wrap {
+        z-index: 1;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -25%);
+
+        @include tablet {
+            @media screen and (min-width: 768px) {
+                width: 100%;
+                max-width: 768px;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+        @include desktop {
+            @media screen and (min-width: 1200px) {
+                width: 100%;
+                max-width: 1200px;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -15%);
+            }
+        }
+    }
 
     &__box {
         display: flex;
@@ -8,17 +56,56 @@
         align-items: center;
         margin: 0px;
         padding: 0px;
+
+        @include tablet {
+            @media screen and (min-width: 768px) {
+            flex-direction: row;
+            justify-content: center;
+            }
+        }
     }
 
-    &__card {
+    &__card { 
         margin-bottom: 20px;
         padding: 40px 32px;
         width: 100%;
         max-width: 280px;
         height: 412px;
         background: #FCFCFC;
-        box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+        box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 35%);
         border-radius: 24px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        @include tablet {
+            @media screen and (min-width: 768px) {
+                padding: 40px 24px;
+                width: 100%;
+                max-width: 224px;
+                height: 528px;
+                margin-right: 16px;
+                margin-bottom: 0;
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+
+        @include desktop {
+            @media screen and (min-width: 1200px) {
+                width: 100%;
+                max-width: 368px;
+                height: 538px;
+                padding: 40px 40px;
+                margin-right: 32px;
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+
     }
 
     &__item {
@@ -28,9 +115,22 @@
         &:last-child {
             margin-bottom: 0;
         }
+
+        @include tablet {
+            @media screen and (min-width: 768px) {
+                margin-bottom: 64px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
     }
 
     &__title {
+        font-family: inherit;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 1.86;
         text-align: center;
         width: 80px;
         height: 16px;
@@ -42,6 +142,14 @@
         &--width {
             width: 130px;
         }
+
+        @include tablet {
+            @media screen and (min-width: 768px) {
+                margin-bottom: 32px;
+                font-size: 16px;
+                height: 28px;
+            }
+        }
     }
 
     &__address-city {
@@ -50,11 +158,35 @@
         font-size: 12px;
         line-height: 1.86;
         margin-bottom: 8px;
+
+        @include tablet {
+            @media screen and (min-width: 768px) {
+                margin-bottom: 12px;
+                font-size: 14px;
+            }
+        }
     }
 
     &__address-link {
         text-decoration: none;
         color: #D6936D;
+        font-family: inherit;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 1.86;
+    
+        @include tablet {
+            @media screen and (min-width: 768px) {
+                letter-spacing: 0.04em;
+                margin-bottom: 12px;
+                font-size: 14px;
+            }
+        }
+        @include desktop {
+            @media screen and (min-width: 1200px) {
+                font-size: 16px;
+            }
+        }
     }
 
     &__schedule-days {
@@ -62,6 +194,17 @@
         font-weight: 500;
         font-size: 12px;
         line-height: 1.86;
+
+        @include tablet {
+            @media screen and (min-width: 768px) {
+                font-size: 14px;
+            }
+        }
+        @include desktop {
+            @media screen and (min-width: 1200px) {
+                font-size: 16px;
+            }
+        }
     }
 
     &__schedule-time {
@@ -70,6 +213,16 @@
         font-size: 12px;
         line-height: 1.86;
         color: #ABABAB;
+        @include tablet {
+            @media screen and (min-width: 768px) {
+                font-size: 14px;
+            }
+        }
+        @include desktop {
+            @media screen and (min-width: 1200px) {
+                font-size: 16px;
+            }
+        }
     }
 
     &__contacts-link {
@@ -79,21 +232,61 @@
         line-height: 1.5;
         text-decoration: none;
         color: #131313;
+        &:hover, &:focus {
+            color: #D6936D;
+        }
+        
+        @include tablet {
+            @media screen and (min-width: 768px) {
+                font-size: 14px;
+            }
+        }
+        @include desktop {
+            @media screen and (min-width: 1200px) {
+                font-size: 16px;
+            }
+        }
     }
 
     &__button {
-        display: flex;
-        align-items: center;
-        justify-content: center;
         font-family: inherit;
         font-weight: 600;
         font-size: 14px;
         line-height: 1.29;
         text-align: center;
-        margin: 0 auto;
         width: 196px;
         height: 42px;
         border-radius: 10px;
+    
+        transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+        &-list{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 32px;
+            
+            @include tablet {
+                @media screen and (min-width: 768px) {
+                    flex-direction: row;
+                    justify-content: center;
+                    margin-top: 60px;
+                }
+            }
+            @include desktop {
+                @media screen and (min-width: 1200px) {
+                    margin-top: 64px;
+                }
+            }
+        }
+
+        &:hover,
+        &:focus {
+            box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+            0px 1px 1px rgba(0, 0, 0, 0.14),
+            0px 2px 1px rgba(0, 0, 0, 0.2);
+        }
 
         &--location {
             margin-bottom: 16px;
@@ -112,25 +305,37 @@
                 color: #000;
                 background-color: $button-disable-color;
             }
+
+            @include tablet {
+                @media screen and (min-width: 768px) {
+                    margin-right: 16px;
+                    margin-bottom: 0;
+                }
+            }
         }
 
-        &--frahchise {
+        &--franchise {
             background-color: transparent;
-            border-color: $button-color;
-
+            border: 2px solid $button-color; 
             &:hover {
-                border-color: $button-hover-color;
+                border: 2px solid $button-hover-color;
             }
         
             &:focus {
-                border-color: $button-hover-color;
+                border: 2px solid $button-hover-color;
                 color: #ffffff;
             }
         
             &:disabled {
                 color: #000;
-                border-color: $button-disable-color;
+                border: 2px solid  $button-disable-color;
             }
         }
+    }
+
+    &__icon {
+        margin-left: 6px;
+        fill: currentColor;
+  
     }
 }
