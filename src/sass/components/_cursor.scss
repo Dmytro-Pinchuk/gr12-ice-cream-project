@@ -1,7 +1,8 @@
 @include desktop {
 body,
 a,
-button {
+button,
+label {
     cursor: url(../images/cursor.png), auto;
 }
 }
