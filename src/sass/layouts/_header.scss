@@ -108,6 +108,8 @@
 .header-navigation {
  //-----------------------------
   display: flex;
+  // display: none;
+  // z-index: 2;
   @include tablet
   {
     display: none;
