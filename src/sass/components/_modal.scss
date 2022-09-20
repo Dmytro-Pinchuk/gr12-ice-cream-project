@@ -127,10 +127,11 @@ $modal-img-shadow-brown: 0px 8px 0px rgba(213, 117, 63, 0.7),0px 9px 19.726px rg
 {
     width: 16px;
     height: 16px;
-
+    border-radius: 50%;
+    background-color: transparent;
     position: absolute;
-    top: 8px;
-    right: 8px;
+    top: 16px;
+    right: 16px;
 }
 .modal-window__header 
 {
