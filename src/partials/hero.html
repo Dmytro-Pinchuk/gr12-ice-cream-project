@@ -42,12 +42,17 @@
           <p class="excerption__text">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et
+            <span class="excerption__under-text">
+              <svg class="excerption__icon" width="40px" height="16px">
+                <use href="./images/icons.svg#icon-arrow-right"></use>
+              </svg>
+            </span>
           </p>
-          <p class="excerption__under-text">
+          <!-- <p class="excerption__under-text">
             <svg class="excerption__icon" width="40px" height="16px">
               <use href="./images/icons.svg#icon-arrow-right"></use>
             </svg>
-          </p>
+          </p> -->
         </div>
       </div>
     </div>
@@ -63,34 +68,50 @@
       </li>
     </ul>
 
-    <!-- <img
-      class="img-container__img img-container__img--ice-cream"
-      src="./images/ice-cream.png"
-      alt="ice cream"
-      width="170"
-      height="219"
-    />
-
     <picture class="img-points">
       <source class="img-points__desk"
-        srcset="./images/hero-points-desk.png 1x, ./images/hero-points-desk.png 2x"
+        srcset="./images/hero/points-desk-1x.png 1x, ./images/hero/points-desk-1x.png 2x"
         media="(min-width:1200px)"
       />
       <source class="img-points__tab"
-        srcset="./images/hero-points-tab.png 1x, ./images/hero-points-tab.png 2x"
+        srcset="./images/hero/points-tab-1x.png 1x, ./images/hero/points-tab-1x.png 2x"
         media="(min-width:768px)"
       />
       <source class="img-points__mob"
-        srcset="./images/hero-points.png 1x, ./images/hero-points.png 2x"
+        srcset="./images/hero/points-mob-1x.png 1x, ./images/hero/points-mob-1x.png 2x"
         media="(max-width:767px)"
       />
       <img
         class="img-points__img img-points__img--hero-points"
-        src="./images/hero-points.png"
-        width="328"
-        height="49.11"
+        src="./images/hero/points-mob-1x.png"
+        width="100%"
+        height="100%"
         alt="ice cream"
       />
-    </picture> -->
+    </picture>
+
+    <picture class="img-ice-cream">
+      <source
+        srcset="./images/hero/icecream-desk-1x.png 1x, ./images/hero/icecream-desk-1x.png 2x"
+        media="(min-width:1200px)"
+      />
+      <source
+        srcset="./images/hero/icecream-tab-1x.png 1x, ./images/hero/icecream-tab-1x.png 2x"
+        media="(min-width:768px)"
+      />
+      <source
+        srcset="./images/hero/icecream-mob-1x.png 1x, ./images/hero/icecream-mob-1x.png"
+        media="(max-width:767px)"
+      />
+      <img
+        class="img-ice-cream__img img-ice-cream__img--hero-points"
+        src="./images/hero/icecream-mob-1x.png"
+        width="100%"
+        height="auto"
+        alt="ice cream"
+      />
+    </picture>
+
+
   </div>
 </section>

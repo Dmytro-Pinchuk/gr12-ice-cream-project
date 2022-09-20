@@ -2,18 +2,18 @@
   background-color: $main-body-color;
   padding-top: 110px;
   /* outline: 2px solid rgb(179, 0, 255); */
-  padding-bottom: 239px;
+  /* padding-bottom: 239px; */
 
 
   @include tablet {
-    padding-top: 94px;
-    padding-bottom: 13px;
+    padding-top: 72px;
+    /* padding-bottom: 13px; */
 
   }
 
   @include desktop {
-    padding-top: 126px;
-    padding-bottom: 19px;
+    padding-top: 74px;
+    /* padding-bottom: 65px; */
   }
 }
 
@@ -25,10 +25,10 @@
   width: 100%;
   padding-left: 20px;
   padding-right: 20px;
-  /* padding-bottom: 239px; */
   margin-left: auto;
   margin-right: auto;
   /* outline: 2px solid rgb(0, 255, 76); */
+  padding-bottom: 239px;
 
   @include mobile {
     width: 480px;
@@ -36,23 +36,27 @@
 
   @include tablet {
     width: 768px;
-    /* padding-bottom: 13px; */
+    padding-bottom: 13px;
+    padding-top: 22px;
   }
 
   @include desktop {
     width: 1200px;
-    /* padding-bottom: 19px; */
+    padding-bottom: 65px;
+    padding-top: 44px;
   }
 }
 
 .main-information {
+  z-index: 2;
+
   @include tablet {
     padding-top: 10px;
     /* padding-bottom: 13px; */
   }
 
   @include desktop {
-    padding-top: 8px;
+    padding-top: 0px;
     /* padding-bottom: 65px; */
   }
 }
@@ -69,8 +73,9 @@
   width: 247px;
   margin-bottom: 32px;
 
+
   @include tablet {
-    width: 181px;
+    width: 182.48px;
     font-size: 18px;
     line-height: calc(23 / 18);
     margin-bottom: 20px;
@@ -83,41 +88,47 @@
     margin-bottom: 28px;
   }
 
-  @include desktop {
-    font-size: 38px;
-    line-height: calc(48 / 38);
-  }
-}
-
-.hero__title--span {
-  font-family: 'Seymour One';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 34;
-  line-height: 0.97;
-  text-transform: uppercase;
-  color: $main-text-color;
-  @include tablet {
-    font-size: 24px;
-    line-height: 0.55;
-  }
-  @include desktop {
+  &--span {
     font-size: 34px;
-    line-height: 0.97;
+    line-height: calc(33 / 34);
+
+    @include tablet {
+      font-size: 24px;
+      line-height: calc(13 / 24);
+    }
+
+    @include desktop {
+      font-size: 38px;
+      line-height: calc(48 / 38);
+    }
   }
 }
-
 
 .hero-btn {
   display: flex;
   gap: 8px;
 
+  @include desktop {
+    gap: 12px;
+  }
+
   &__item {
     width: 62px;
     height: 24px;
 
+    @include desktop {
+      width: 134px;
+      height: 42px;
+    }
+
     &:last-child {
       width: 82.8px;
+      height: 24px;
+
+      @include desktop {
+        width: 154px;
+        height: 40px;
+      }
     }
   }
 
@@ -139,6 +150,11 @@
     color: #131313;
     border: 2px solid $button-color;
     border-radius: 8px;
+
+    @include desktop {
+      font-size: 14px;
+      line-height: calc(18 / 14);
+    }
   }
 
   &__link--like-link {
@@ -147,56 +163,63 @@
     line-height: calc(10 / 8);
     text-decoration-line: underline;
     color: $button-color;
-  }
 
+    @include desktop {
+      font-size: 14px;
+      line-height: calc(17 / 14);
+    }
+  }
 }
 
-.img-container__img--ice-cream {
+/* .img-container__img--ice-cream {
   position: absolute;
   bottom: 0;
   left: 50%;
   transform: translate(-50%, 0);
-}
+} */
 
 .cafes {
   display: none;
-
+  z-index: 2;
+  
   @include tablet {
     display: flex;
     flex-direction: column;
     gap: 20px;
-  }
 
-  &__item--number {
-    font-weight: 900;
-    font-size: 28px;
-    line-height: calc(34 / 28);
-    text-align: right;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    color: $second-text-color;
-  }
+    &__item--number {
+      font-weight: 900;
+      font-size: 28px;
+      line-height: calc(34 / 28);
+      text-align: right;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: $second-text-color;
+      margin-bottom: 4px;
+    }
 
-  &__item--type {
-    font-weight: 400;
-    font-size: 8px;
-    line-height: calc(10 / 8);
-    text-align: right;
-    color: $main-text-color;
+    &__item--type {
+      font-weight: 400;
+      font-size: 8px;
+      line-height: calc(10 / 8);
+      text-align: right;
+      color: $main-text-color;
+    }
+
   }
 
   @include desktop {
+    padding-top: 8px;
 
     &__item--number {
       font-size: 46px;
-      line-height: calc(56 / 46)
+      line-height: calc(56 / 46);
     }
 
     &__item--type {
       font-size: 14px;
-      line-height: calc(17 / 14)
+      line-height: calc(17 / 14);
     }
-
   }
 }
 
@@ -206,15 +229,16 @@
 
   @include tablet {
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     margin-top: 28px;
     /* padding-bottom: 13px; */
   }
 
   @include desktop {
-    align-items: normal;
-    padding-bottom: 46px;
-    padding-top: 46px;
+    align-items: center;
+    /* padding-bottom: 46px;
+    padding-top: 46px; */
+    margin-top: 42px;
   }
 }
 
@@ -229,7 +253,7 @@
 
   &__many-ice-cream {
     display: none;
-  
+
     @include tablet {
       display: block;
     }
@@ -240,10 +264,12 @@
   margin-left: 33px;
 
   @include desktop {
-    padding-top: 67px;
+    /* padding-top: 67px; */
+    margin-left: 14px;
   }
 
   &__text {
+    position: relative;
     font-weight: 400;
     font-size: 12px;
     line-height: calc(17 / 12);
@@ -258,29 +284,66 @@
   }
 
   &__under-text {
-    margin-top: 20px;
+    position: absolute;
+    left: 0;
+    bottom: -28px;
 
     @include desktop {
-      margin-top: 32px;
+      bottom: -40px;
     }
   }
 }
 
-@include desktop {}
+/* __________________________________________________ */
 
-/* .img-points--hero-points */
-/* .img-points {
+.img-points {
   position: absolute;
-  width: 328px;
-  bottom: 0;
+  width: 100%;
+  min-width: 320px;
+  bottom: -2px;
+  left: 0;
+  /* left: 50%;
+  transform: translate(-50%, 0); */
+
+  @include mobile{
+    max-width: 480px;
+  }
+
+  @include tablet {
+    width: 768px;
+    max-width: 768px;
+  }
+
+  @include desktop {
+    width: 1200px;
+    max-width: 1200px;
+  }
+}
+
+.img-ice-cream {
+  position: absolute;
+  width: 100%;
+  max-width: 276px;
+  bottom: -4px;
   left: 50%;
   transform: translate(-50%, 0);
 
-  &__tab{
-    width: 768px;
+  @include mobile{
+    width: 100%;
+    left: 45%;
+    transform: translate(-45%, 0);
   }
 
-  &__desk {
-    width: 1200px;
+  @include tablet {
+    /* width: %; */
+    max-width: 379px;
+    left: 47%;
+    transform: translate(0, 0);
   }
-} */
+
+  @include desktop {
+    /* width: 55%; */
+    max-width: 642px;
+    left: 47%;
+  }
+}
