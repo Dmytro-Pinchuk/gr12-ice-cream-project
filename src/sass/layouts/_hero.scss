@@ -366,6 +366,7 @@
     max-width: 379px;
     left: 47%;
     transform: translate(0, 0);
+    z-index: 1;
   }
 
   @include desktop {
