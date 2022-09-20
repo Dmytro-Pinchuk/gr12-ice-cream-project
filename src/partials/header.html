@@ -35,36 +35,41 @@
           </picture>
         </span>
       </a>
-    </div>
+      <button type="button" class="menu-open-btn js-open-menu menu__first-btn" data-menu-open>
+        <svg class="menu-open-btn__menu-icon menu__svg" width="32px" height="32px">
+          <use href="./images/icons.svg#icon-menu"></use>
+        </svg>
+        <svg class="menu-open-btn__menu-icon menu__svg is-none" width="32px" height="32px">
+          <use href="./images/icons.svg#icon-chrose"></use>
+        </svg>
+      </button>
+<!--================================================================-->
+    <div class="header-btn menu__container">
 
-    <div class="header-btn">
-
-      <nav class="header-navigation">
-        <ul class="header-nav list">
+      <nav class="header-navigation memu__navigtion">
+        <ul class="header-nav list memu__list">
           <li class="header-nav__item">
-            <a href="./index.html" class="header-nav__link link">Home</a>
+            <a href="./index.html" class="header-nav__link link menu__link">Home</a>
           </li>
           <li class="header-nav__item">
-            <a href="" class="header-nav__link link">How it’s made?</a>
+            <a href="" class="header-nav__link link menu__link">How it’s made?</a>
           </li>
           <li class="header-nav__item">
-            <a href="" class="header-nav__link link">Our products</a>
+            <a href="" class="header-nav__link link menu__link">Our products</a>
           </li>
           <li class="header-nav__item">
-            <a href="#contacts" class="header-nav__link link">Contact</a>
+            <a href="#contacts" class="header-nav__link link menu__link">Contact</a>
           </li>
         </ul>
       </nav>
 
-      <button type="button" class="menu-open-btn" data-menu-open>
+      <button type="button" class="menu-open-btn menu__second-btn js-open-menu" data-menu-open>
         <svg class="menu-open-btn__menu-icon" width="32px" height="32px">
           <use href="./images/icons.svg#icon-menu"></use>
         </svg>
       </button>
-
       
-
-      <button type="button" class="btn-buy">
+      <button type="button" class="btn-buy menu-btn-buy">
         <span class="btn-buy__text">Buy now</span>
         <svg class="btn-buy__btn-icon" width="7.1px" height="10px">
           <use href="./images/icons.svg#icon-btn-more"></use>
