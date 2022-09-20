@@ -68,13 +68,26 @@
     }
 
   }
-
+&__link-logo:focus .nav__logo-picture{
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+opacity: 0;
+}
   &__logo-container {
     display: inline-block;
     width: 40.47px;
     height: 37px;
+    background-image: url(./../images/header/logo-active-mob.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include retina {
+            background-image: url(./../images/header/logo-active-mob-2x.png);
+        }
 
     @include tablet {
+      background-image: url(./../images/header/logo-active-tab.png);
+      @include retina {
+            background-image: url(./../images/header/logo-active-tab-2x.png);
+        }
       width: 48px;
       height: 44px;
     }
@@ -82,10 +95,21 @@
     @include desktop {
       width: 60px;
       height: 65px;
+       background-image: url(./../images/header/logo-active-desk.png);
+      @include retina {
+            background-image: url(./../images/header/logo-active-desk-2x.png);
+        }
     }
   }
-}
+  &__logo-picture{
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
+}
+&__logo-container:hover .nav__logo-picture{
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+opacity: 0;
+}
+}
 
 .header-btn {
   //--------------------------------------
