@@ -1,25 +1,36 @@
-.about .conteiner {
+.about{
     background-color: $pagination-bullet-bgcolor-active;
     padding-bottom: 42px;
     padding-top: 60px;
+    @include tablet{
+        padding-bottom: 53px;
+    }
+    @include desktop{
+        padding-bottom: 152px;
+    }
+}
+.about .conteiner {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
+    width: 100%;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0px 20px ;
+@include mobile{
+    width: 480px;
+    max-width: none;
+}
     @include tablet {
-    padding-bottom: 48px;
-    padding-right: 32px;
-    padding-left: 32px;
+        width: 768px;
     }
     @include desktop {
-    padding: 60px 16px 89px;
-    
+        width: 1200px;
     }
 }
 .about__label {
-    font-family: "Montserrat";
-    font-style: normal;
     font-weight: 700;
     font-size: 18px;
     line-height: 1.22;
@@ -35,14 +46,10 @@
     letter-spacing: 0.04em;
     }
     @include desktop{
-        font-size: 30px;
-line-height: 1.23;
+    font-size: 30px;
     }
 }
 .about__title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     font-family: "Seymour One";
     font-style: normal;
     font-weight: 400;
@@ -51,20 +58,12 @@ line-height: 1.23;
     text-align: center;
     letter-spacing: 0.04em;
     text-transform: uppercase;
-    color: $main-text-color;;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 0;
-    margin-bottom: 32px;
-    width: 117px;
+    color: $main-text-color;
+    margin: 0px 64px 32px 64px ;
     @include tablet {
-    font-weight: 400;
     font-size: 34px;
     line-height: 1.26;
     letter-spacing: 0.06em;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
     margin-bottom: 72px;
     }
     @include desktop{
@@ -78,8 +77,7 @@ line-height: 1.23;
     position: relative;
     width: 279px;
     height: 279px;
-    // margin-bottom: 40px;
-    margin-right: 0;
+    margin-bottom: 62px;
     background: linear-gradient(
         0deg,
         rgba(248, 210, 78, 0.7),
@@ -89,9 +87,9 @@ line-height: 1.23;
     box-shadow: 0px 4.48583px 16.8218px rgba(153, 114, 23, 0.25);
     border-radius: 140.182px;
     @include tablet {
-        width: 336px;
-    //   width: calc(50% - 16px);
-    height: 356px;
+        margin-bottom: 0;
+    width: 335px;
+    height: 330px;
     border-radius: 165.879px;
     @include desktop{
         border-radius: 250px;
@@ -103,78 +101,57 @@ line-height: 1.23;
 .about__picture {
     position: absolute;
     top: 8%;
+    left: 0%;
+    @include desktop{
+        left: 1%; 
+    }
 }
 .about_item {
     &:not(:last-child) {
-    margin-bottom: 4x;
-    }
-//     @include desktop{
-//         &:first-child {
-// margin-top: 90px;
-//         }
-//     }
-
-}
-.about__list {
-    margin-top: 48px;
-    @include tablet {
-    margin-top: 0;
-    display: flex;
-    align-items: flex-start;
+    margin-bottom: 4px;
     }
 
 }
+
 .about__text {
-    font-family: "Montserrat";
+    box-sizing: border-box;
+    display: inherit;
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
     line-height: 176%;
     text-align: center;
     letter-spacing: 0.04em;
-    width: 220px;
     margin: 0 auto 0 auto;
     color: $main-text-color;
     @include tablet {
-    margin-top: 7px;
-    width: 334px;
-    
+    margin-top: 8px;
     text-align: start;
     }
     @include desktop{
-        
-        font-size: 16px;
-        width: 100%;
+        font-size: 14px;
+        line-height: 194%;
     }
 }
 .about__text__desctop {
     display: none;
-    font-family: "Montserrat";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 176%;
-    text-align: center;
-    letter-spacing: 0.04em;
-    max-width: 220px;
-    margin: 0 auto 0 auto;
-    color: #fcfcfc;
     @include tablet {
     display: block;
+    font-style: normal;
     text-align: start;
     font-weight: 400;
     font-size: 12px;
     line-height: 194%;
-    width: 280px;
-    max-width: 334px;
+    letter-spacing: 0.04em;
+    margin-left: 0;
+    margin-right: 0;
     margin-top: 8px;
+    color: $main-text-color;
     }
     @include desktop{
-    font-size: 14px;
-    max-width: 463px; 
-    width: 100%;
+    font-size: 13px;
     line-height: 194%;
-        
+    
     }
 }
 .about__btn {
@@ -200,7 +177,25 @@ line-height: 1.23;
     }
     @include tablet {
     margin-top: 48px;
-    
+    }
+}
+.about_part {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 0;
+    padding-left: 30px;
+    padding-right: 30px;
+    @include tablet {
+    padding: 0;
+    width: calc(100% - 373px);
+    align-items: flex-start;
+    }
+    @include desktop{
+        margin-top: 90px;
+        width: calc(100% - 705px);
+        margin-right: 100px;
     }
 }
 .about__thumb {
@@ -210,42 +205,16 @@ line-height: 1.23;
     justify-content: center;
     width: 100%;
     @include tablet {
-        gap: 32px;
+    gap: 32px;
     flex-direction: row;
     align-items: flex-start;
-    flex-wrap: wrap;
-    max-height: 356px;
-    max-width: 704px;
+    width: calc(100% - 24px);
     }
     @include desktop{
-        gap: 0px;
-        max-height: 1000px;
-        max-width: 1200px;
-        justify-content: flex-start;
+        gap: 95px;
+        width: 100%;
     }
 }
-.about_part {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 0;
-    @include tablet {
-    width: 336px;
-    margin-top: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    }
-    @include desktop{
-        margin-left: 100px;
-        width: 463px;
-        height: 347px;
-        justify-content: center;
-        margin-top: 90px;
-        
-    }
-}
+
 
 
