@@ -385,14 +385,14 @@
   letter-spacing: 0.04em;
   color: #131313;
   margin-top: 0;
-  margin-bottom: 90px;
+  margin-bottom: 70px;
   @media screen and (min-width: 480px) {
     width: 200px;
     height: 124px;
-    margin-bottom: 70px;
   }
   @media screen and (min-width: 768px) {
     width: 148px;
+    margin-bottom: 90px;
   }
   @media screen and (min-width: 1200px) {
     font-size: 16px;
