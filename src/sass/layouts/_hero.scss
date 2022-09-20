@@ -150,10 +150,26 @@
     color: #131313;
     border: 2px solid $button-color;
     border-radius: 8px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 
     @include desktop {
       font-size: 14px;
       line-height: calc(18 / 14);
+
+      &:hover {
+        border-color: $button-hover-color;
+      }
+
+      &:focus {
+        border-color: $button-hover-color;
+        color: $main-text-color;
+      }
+
+      &:disabled {
+        border-color: $button-disable-color;
+      }
     }
   }
 
@@ -163,25 +179,32 @@
     line-height: calc(10 / 8);
     text-decoration-line: underline;
     color: $button-color;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 
     @include desktop {
       font-size: 14px;
       line-height: calc(17 / 14);
+
+      &:hover {
+        color: $button-hover-color;
+      }
+
+      &:focus {
+        color: $main-text-color;
+      }
+
+      &:disabled {
+        color: $button-disable-color;
+      }
     }
   }
 }
 
-/* .img-container__img--ice-cream {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translate(-50%, 0);
-} */
-
 .cafes {
   display: none;
   z-index: 2;
-  
+
   @include tablet {
     display: flex;
     flex-direction: column;
@@ -302,10 +325,12 @@
   min-width: 320px;
   bottom: -2px;
   left: 0;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
   /* left: 50%;
   transform: translate(-50%, 0); */
 
-  @include mobile{
+  @include mobile {
     max-width: 480px;
   }
 
@@ -326,10 +351,12 @@
   max-width: 276px;
   bottom: -4px;
   left: 50%;
-  transform: translate(-50%, 0);
+  transform: translate(-45%, 0);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-  @include mobile{
-    width: 100%;
+
+  @include mobile {
+    max-width: 300px;
     left: 45%;
     transform: translate(-45%, 0);
   }
