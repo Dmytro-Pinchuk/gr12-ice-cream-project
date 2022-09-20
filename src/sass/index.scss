@@ -1,8 +1,11 @@
 @import './utils/vars';
 @import './utils/hidden';
-
+@import './utils/resets';
+@import './utils/mixins';
+@import './components/cursor';
 @import './components/components';
 @import './components/common';
+@import './components/modal';
 
 @import './layouts/header';
 @import './layouts/hero';
