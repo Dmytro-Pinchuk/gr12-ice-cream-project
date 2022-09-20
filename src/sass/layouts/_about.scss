@@ -102,9 +102,13 @@
     position: absolute;
     top: 8%;
     left: 0%;
+    
     @include desktop{
         left: 1%; 
     }
+}
+.about__img {
+    width: 100%;
 }
 .about_item {
     &:not(:last-child) {
@@ -215,6 +219,3 @@
         width: 100%;
     }
 }
-
-
-
