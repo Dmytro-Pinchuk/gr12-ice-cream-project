@@ -1,3 +1,14 @@
+.menu__backdrop
+{
+
+}
+.menu__logo
+{
+    @media screen and(max-width:1199px)
+    {
+        z-index: 4;
+    }
+}
 .menu__container
 { 
     @media screen and (max-width:1199px)
@@ -14,7 +25,7 @@
             transform: translateX(100%);
         }
         
-        top: 100%;
+        top: 0;
         left: 0;
 
         overflow-y: hidden;
@@ -49,11 +60,19 @@
             visibility: visible;
             opacity: 1;
             transform: translateX(0);
-            transition-property: transform, opacity, visibility, clip-path, overflow, position;
-            transition-duration: var(--main-duration-time);
+            transition-property: transform, opacity, visibility, clip-path, overflow, position, width;
+            transition-duration: 250ms;
             transition-timing-function: ease-in-out;
-            transition-delay: var(--main-delay-time);
+            //transition-delay: var(--main-delay-time);
 
+            @media screen and (max-width:767px)
+            {
+                &.mobile-menu-open >.btn-buy 
+                {
+                    display: block;
+                }
+            }
+            
             @include tablet
             {
                 &.mobile-menu-open >.btn-buy 
@@ -65,8 +84,8 @@
         }
         @media screen and (max-width: 480px)
         {
-            padding-left: 10px;
-            padding-right: 10px;
+            //padding-left: 10px;
+            //padding-right: 10px;
         }
     }
     /*@include desktop
@@ -111,6 +130,10 @@
         font-size: 32px;
         line-height: 1.2;
     }
+    &:hover
+    {
+        color: $button-color;
+    }
 }
 .menu-btn-buy
 {
@@ -125,9 +148,14 @@
 {
     fill: $main-text-color;
 }
+//------------for--js-----------------------
 .is-none
 {
     display: none;
+}
+.no-scroll
+{
+    overflow: hidden;
 }
 //-------------------ident-js------------------------
 .menu__second-btn
@@ -148,16 +176,26 @@
 }
 .menu__first-btn
 {
-    @include tablet
-    {
-        display: none;
-        &.is-open
+        @include tablet
         {
-            display: block;
+            display: none;
         }
-    }
+        @media screen and (max-width:1199px)
+        {
+            &.is-open
+            {
+                z-index: 4;
+            display: block;
+            }
+        }
+        
+    
     @include desktop
     {
         display: none;
     }
+}
+.current
+{
+    color: black;
 }

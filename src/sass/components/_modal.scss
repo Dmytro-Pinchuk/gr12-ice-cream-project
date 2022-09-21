@@ -37,7 +37,7 @@ $modal-img-shadow-brown: 0px 8px 0px rgba(213, 117, 63, 0.7),0px 9px 19.726px rg
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
-    //transform: scale(20%,20%);
+    transform: scale(20%,20%);
 }
 //======================The--END--base-classes---------------------------------
 .modal-backdrop 
@@ -131,6 +131,15 @@ $modal-img-shadow-brown: 0px 8px 0px rgba(213, 117, 63, 0.7),0px 9px 19.726px rg
     position: absolute;
     top: 8px;
     right: 8px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+}
+.modal-window__close-svg
+{
+    fill: currentColor;
 }
 .modal-window__header 
 {
