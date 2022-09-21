@@ -290,7 +290,7 @@
 
 .navigation {
   display: none;
-
+  z-index: 2;
   @include desktop {
     width: 1200px;
     padding-top: 8px;
