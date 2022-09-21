@@ -377,7 +377,7 @@
   transform: translate(-45%, 0);
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   /* animation: appearance-icecream 2s cubic-bezier(.66,.03,1,.1); */
-  animation: appearance-icecream-mob 2s cubic-bezier(.66, .03, 1, .1);
+  animation: appearance-icecream-mob 2s cubic-bezier(.3, 0, 1, .99);
   &__img {
     z-index: -1;
   }
