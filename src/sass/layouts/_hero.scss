@@ -52,7 +52,7 @@
 }
 
 .main-information {
-  z-index: 2;
+  // z-index: 2;
 
   @include tablet {
     padding-top: 10px;
@@ -207,7 +207,7 @@
 
 .cafes {
   display: none;
-  z-index: 2;
+  // z-index: 2;
 
   @include tablet {
     display: flex;
@@ -283,9 +283,14 @@
 
   &__many-ice-cream {
     display: none;
-
+    width: 125px;
+    height: 125px;
     @include tablet {
       display: block;
+    }
+    @include desktop {
+      width: 225px;
+      height: 225px;
     }
   }
 }
@@ -324,6 +329,10 @@
   }
 }
 
+.excerption-img__many-ice-cream {
+  
+}
+
 /* __________________________________________________ */
 
 .img-points {
@@ -353,6 +362,9 @@
     width: 1200px;
     max-width: 1200px;
   }
+  &__img {
+    width: 100%;
+  }
 }
 
 .img-ice-cream {
@@ -369,7 +381,7 @@
 
   @include mobile {
     max-width: 300px;
-    left: 45%;
+    // left: 45%;
     transform: translate(-45%, 0);
   }
 
