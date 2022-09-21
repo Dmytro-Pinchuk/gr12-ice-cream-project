@@ -268,6 +268,9 @@
 .navigation {
   display: none;
   @include desktop {
+    width: 1200px;
+    padding-top: 8px;
+    padding-bottom: 0px;
     display: block;
   }
   &__list {
