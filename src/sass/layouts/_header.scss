@@ -1,200 +1,365 @@
-.header {
-  position: absolute;
-  width: 100%;
-  background-color: $main-body-color;
-  left: 0;
-  right: 0;
-  /* outline: 2px solid rgb(179, 0, 255); */
+// .header {
+//   position: absolute;
+//   width: 100%;
+//   background-color: $main-body-color;
+//   left: 0;
+//   right: 0;
+//   /* outline: 2px solid rgb(179, 0, 255); */
 
-  @include tablet {}
+//   @include tablet {}
+// }
+
+// .header__container {
+//   //--------------
+//   @media screen and (max-width:1199px)
+//   {
+//     position: relative;
+//   }
+//   //---------------------------
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   justify-content: space-between;
+//   padding-left: 16px;
+//   padding-right: 16px;
+//   margin-left: auto;
+//   margin-right: auto;
+//   /* outline: 2px solid rgb(0, 255, 76); */
+
+//   @include mobile {
+//     width: 480px;
+//   }
+
+//   @include tablet {
+//     width: 768px;
+//   }
+
+//   @include desktop {
+//     flex-direction: row;
+//     width: 1200px;
+//     padding-top: 8px;
+//     padding-bottom: 8px;
+//   }
+// }
+
+// .nav {
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-between;
+//   width: 100%;
+
+//   &__link-logo {
+//     margin-right: 0px;
+//     padding-top: 12px;
+//     padding-bottom: 12px;
+//     text-decoration: none;
+
+//     @include tablet {
+//       margin-right: 0px;
+//       padding-top: 20px;
+//       padding-bottom: 20px;
+//     }
+
+//     @include desktop {
+//       /* margin-right: 269px; */
+//       /* padding-top: 8px;
+//       padding-bottom: 8px; */
+//       padding: 0;
+//     }
+
+//   }
+// &__link-logo:focus .nav__logo-picture{
+//     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+// opacity: 0;
+// }
+//   &__logo-container {
+//     display: inline-block;
+//     width: 40.47px;
+//     height: 37px;
+//     background-image: url(./../images/header/logo-active-mob.png);
+//     background-repeat: no-repeat;
+//     background-size: cover;
+//     @include retina {
+//             background-image: url(./../images/header/logo-active-mob-2x.png);
+//         }
+
+//     @include tablet {
+//       background-image: url(./../images/header/logo-active-tab.png);
+//       @include retina {
+//             background-image: url(./../images/header/logo-active-tab-2x.png);
+//         }
+//       width: 48px;
+//       height: 44px;
+//     }
+
+//     @include desktop {
+//       width: 60px;
+//       height: 65px;
+//        background-image: url(./../images/header/logo-active-desk.png);
+//       @include retina {
+//             background-image: url(./../images/header/logo-active-desk-2x.png);
+//         }
+//     }
+//   }
+//   &__logo-picture{
+//   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+// }
+// &__logo-container:hover .nav__logo-picture{
+//   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+// opacity: 0;
+// }
+// }
+
+// .header-btn {
+//   //--------------------------------------
+//   display: none;
+//   @include tablet
+//   {
+//     display: flex;
+//     align-items: center;
+//   }
+
+//   //-------------------------------------
+//   @include desktop {
+//     display: flex;
+//     margin-top: 20px;
+//   }
+
+
+// }
+
+// .header-navigation {
+//  //-----------------------------
+//   display: flex;
+//   // display: none;
+//   z-index: 2;
+//   @include tablet
+//   {
+//     display: none;
+//   }
+//   flex-direction: column;
+//   align-items: center;
+//   @include desktop {
+//     display: flex;
+//     align-items: center;
+//     align-content: start;
+//     justify-content: center;
+//   }
+// }
+
+// .header-nav {
+//   //display: none;
+
+//   @include desktop
+//   {
+//     display: flex;
+//     margin-right: 247px;
+
+//     &__item {
+//       margin-right: 27px;
+
+//       &:last-child {
+//         margin-right: 0;
+//       }
+//     }
+//   }
+
+//   &__link {
+//     font-weight: 700;
+//     font-size: 16px;
+//     line-height: calc(20 / 16);
+//     display: flex;
+//     align-items: center;
+//     color: $main-text-color;
+
+//     @include desktop {
+//       padding: 0;
+
+//       &:hover,
+//       &:focus {
+//         color: $button-color;
+//       }
+//     }
+//   }
+// }
+
+
+// .menu-open-btn {
+//   padding: 0;
+//   width: 32px;
+//   height: 32px;
+//   background-color: transparent;
+//   z-index: 2;
+//   @include desktop {
+//     display: none;
+//   }
+// }
+
+// .btn-buy {
+//   display: none;
+//   z-index: 2;
+
+//   @include tablet {
+//     display: block;
+//     width: 152px;
+//     height: 42px;
+//     background: $button-color;
+//     border-radius: 10px;
+//     margin-left: 32px;
+
+//     @include desktop {
+//       margin-left: 0px;
+//       transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+//       &:hover {
+//         background-color: $button-hover-color;
+//       }
+
+//       &:focus {
+//         background-color: $button-hover-color;
+//       }
+
+//       &:disabled {
+//         background-color: $button-disable-color;
+//       }
+
+//       &:focus-within &__text {
+//         color: $main-text-color;
+//       }
+
+//       &:focus-within &__btn-icon {
+//         fill: $main-text-color;
+//       }
+
+//       &__text {
+//         margin-right: 7.23px;
+//         font-weight: 600;
+//         font-size: 14px;
+//         line-height: calc(17 / 14);
+//         color: $second-text-color;
+//         transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+//       }
+
+//       &__btn-icon {
+//         transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+//       }
+//     }
+//   }
+
+// }
+.header {
+  background-color: $main-body-color;
+  &__container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    align-items: center;
+  }
+  &__buttons {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
 }
 
-.header__container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-left: 16px;
-  padding-right: 16px;
-  margin-left: auto;
-  margin-right: auto;
-  /* outline: 2px solid rgb(0, 255, 76); */
-
-  @include mobile {
-    width: 480px;
-  }
-
-  @include tablet {
-    width: 768px;
-  }
-
+.navigation {
+  display: none;
   @include desktop {
+<<<<<<< HEAD
     width: 1200px;
     padding-top: 8px;
     padding-bottom: 0px;
+=======
+    display: block;
+  }
+  &__list {
+    height: 100%;
+    display: flex;
+    gap: 27px;
+    align-items: center;
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+  }
+  &__link {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    color: $main-text-color;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus {
+      color: $second-body-color;
+    }
+>>>>>>> main
   }
 }
 
-.nav {
-  display: flex;
-  align-items: center;
-
-
-  &__link-logo {
-    margin-right: 0px;
-    padding-top: 12px;
-    padding-bottom: 12px;
-
-    @include tablet {
-      margin-right: 0px;
-      padding-top: 20px;
-      padding-bottom: 20px;
-    }
-
-    @include desktop {
-      /* margin-right: 269px; */
-      /* padding-top: 8px;
-      padding-bottom: 8px; */
-      padding: 0;
-    }
-
-  }
-
-  &__logo-container {
-    display: inline-block;
-    width: 40.47px;
+.logo {
+  
+  &__pictuare {
+    display: block;
+    width: 40px;
     height: 37px;
-
     @include tablet {
       width: 48px;
       height: 44px;
     }
-
     @include desktop {
       width: 60px;
-      height: 65px;
+      height: 67px;
+    }
+    margin: 5px;
+    // margin-top: 20px;
+  }
+}
+
+.menu {
+  &__btn {
+    background-color: transparent;
+    width: 32px;
+    height: 32px;
+    @include desktop {
+      display: none;
+    }
+  }
+  &__icon {
+    fill: #fff;
+    transform: scale(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus {
+      transform: scale(110%);
     }
   }
 }
 
-
-.header-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  @include desktop {
-    margin-top: 20px;
-  }
-
-
-}
-
-.header-navigation {
+.buy-now {
+  &__btn {
   display: none;
   z-index: 2;
-
-  @include desktop {
-    display: flex;
-    align-items: center;
-    align-content: start;
-    justify-content: center;
-  }
-}
-
-.header-nav {
-  display: flex;
-  margin-right: 247px;
-
-  &__item {
-    margin-right: 27px;
-
-    &:last-child {
-      margin-right: 0;
-    }
-  }
-
-  &__link {
-    font-weight: 700;
-    font-size: 16px;
-    line-height: calc(20 / 16);
-    display: flex;
-    align-items: center;
-    color: $main-text-color;
-
-    @include desktop {
-      padding: 0;
-
-      &:hover,
-      &:focus {
-        color: $button-color;
-      }
-    }
-  }
-}
-
-
-.menu-open-btn {
-  padding: 0;
-  width: 32px;
-  height: 32px;
-  background-color: transparent;
-
-  @include desktop {
-    display: none;
-  }
-}
-
-.btn-buy {
-  display: none;
-  z-index: 2;
-  margin-bottom: 4px;
-
-  @include tablet {
-    display: block;
-    width: 152px;
-    height: 42px;
-    background: $button-color;
-    border-radius: 10px;
-    margin-left: 32px;
-
-    &__btn-icon--icon {
-      margin-left: 7.23px;
+    @include tablet {
+      display: block;
+      width: 152px;
+      height: 42px;
+      background-color: $button-color;
       transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+      border-radius: 10px;
+      margin-left: 32px;
     }
-
-    @include desktop {
-      margin-left: 0px;
-      transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-      &:hover {
-        background-color: $button-hover-color;
-      }
-
-      &:focus {
-        background-color: $button-hover-color;
-      }
-
-      &:disabled {
-        background-color: $button-disable-color;
-      }
-
-      &:focus-within &__text {
-        color: $main-text-color;
-      }
-
-      &:focus-within &__btn-icon {
-        fill: $main-text-color;
-      }
-
-      &__text {
-        /* margin-right: 7.23px; */
-        font-weight: 600;
-        font-size: 14px;
-        line-height: calc(17 / 14);
-        color: $second-text-color;
-        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-      }
+    &:hover,
+    &:focus {
+      background-color: $button-hover-color;
     }
+  }
+  &__text {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.21;
+    margin-right: 7px;
   }
 }
