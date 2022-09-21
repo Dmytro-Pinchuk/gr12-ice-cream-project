@@ -2,6 +2,7 @@
 
     const modal_refs = {
             openModalBtn1: document.querySelectorAll(".mob-menu__btn"),
+            openModalBtn1_1: document.querySelectorAll(".buy-now__btn"),
             openModalBtn2: document.querySelectorAll(".products__btn"),
             openModalBtn3: document.querySelectorAll(".contacts__button--franchise"),
             openModalBtn4: document.querySelectorAll(".about__btn"),
@@ -13,9 +14,13 @@
 
         for(let i=0;i<modal_refs.openModalBtn1.length;i++)
         {
-            console.log(modal_refs.openModalBtn1.length)
             modal_refs.openModalBtn1[i].value="buy_now_form";
             modal_refs.openModalBtn1[i].addEventListener("click",toggleModal);
+        }
+        for(let i=0;i<modal_refs.openModalBtn1_1.length;i++)
+        {
+            modal_refs.openModalBtn1_1[i].value="buy_now_form";
+            modal_refs.openModalBtn1_1[i].addEventListener("click",toggleModal);
         }
         for(let i=0;i<modal_refs.openModalBtn2.length;i++)
         {   

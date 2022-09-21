@@ -13,7 +13,11 @@
                     <input class="modal-product__check" type="checkbox" id="cream" name="product_cream">
                     <label class="modal-product__checkbox modal-product__checkbox--color-green" for="cream">
                     <span class="modal-product-image__container">
-                        <img class="modal-product-image modal-product-image--absolute-position" src="./images/modal/buy-now/cream-m.jpg" alt="ice cream" width="132">
+                        <picture>
+                            <source srcset="./images/modal/buy-now/cream-m.jpg 1x, ./images/modal/buy-now/cream-m-2x.jpg 2x" media="(max-width:767px)">
+                            <source srcset="./images/modal/buy-now/cream-m.jpg 1x, ./images/modal/buy-now/cream-m-2x.jpg 2x" media="(min-width:768px)">
+                            <img class="modal-product-image modal-product-image--absolute-position" src="./images/modal/buy-now/cream-m.jpg" alt="ice cream" width="132">
+                        </picture>
                     </span>
                         <span class="modal-product__name">Ice cream</span>
                     </label>
@@ -22,7 +26,11 @@
                     <input class="modal-product__check" type="checkbox" id="cofee" name="product_cofee">
                     <label class="modal-product__checkbox modal-product__checkbox--color-yellow" for="cofee">
                     <span class="modal-product-image__container">
-                        <img class="modal-product-image modal-product-image--color-yellow modal-product-image--absolute-position" src="./images/modal/buy-now/cofee-m.jpg" alt="ice cream" width="132">
+                        <picture>
+                            <source srcset="./images/modal/buy-now/cofee-m.jpg 1x, ./images/modal/buy-now/cofee-m-2x.jpg 2x" media="(max-width:767px)">
+                            <source srcset="./images/modal/buy-now/cofee-m.jpg 1x, ./images/modal/buy-now/cofee-m-2x.jpg 2x" media="(min-width:768px)">
+                            <img class="modal-product-image modal-product-image--absolute-position" src="./images/modal/buy-now/cream-m.jpg" alt="ice cream" width="132">
+                        </picture>
                     </span>
                         <span class="modal-product__name">Ice coffee</span>
                     </label>
@@ -31,7 +39,11 @@
                     <input class="modal-product__check" type="checkbox" id="milkshake" name="product_milkshake">
                     <label class="modal-product__checkbox modal-product__checkbox--color-brown" for="milkshake">
                     <span class="modal-product-image__container">
-                        <img class="modal-product-image modal-product-image--color-brown modal-product-image--absolute-position" src="./images/modal/buy-now/milkshake-m.jpg" alt="ice cream" width="132">
+                        <picture>
+                            <source srcset="./images/modal/buy-now/milkshake-m.jpg 1x, ./images/modal/buy-now/milkshake-m-2x.jpg 2x" media="(max-width:767px)">
+                            <source srcset="./images/modal/buy-now/milkshake-m.jpg 1x, ./images/modal/buy-now/milkshake-m-2x.jpg 2x" media="(min-width:768px)">
+                            <img class="modal-product-image modal-product-image--color-brown modal-product-image--absolute-position" src="./images/modal/buy-now/milkshake-m.jpg" alt="ice cream" width="132">
+                        </picture>
                     </span>
                         <span class="modal-product__name">Milkshake</span>
                     </label>
@@ -55,7 +67,7 @@
     <div class="modal-window modal-is-hidden modal-window--ingradients-padding" id="modal_ingredients">
         <button id="close-btn-ingradients" class="modal-window__close-btn" value="modal_ingredients">x</button>
         <p class="modal-window__header modal-window__header--ingredients-margin">Chololate icecream</p>
-        <img class="modal-product-image modal-product-image--add-margin-bottom" src="./images/modal/buy-now/cream-t.jpg" alt="ice cream" width="132">
+        <img class="modal-product-image modal-product-image--add-margin-bottom" srcset="./images/modal/ingredients/img-1-full.jpg 1x, ./images/modal/ingredients/img-1-full-2x.jpg 2x" src="./images/modal/ingredients/img-1-full.jpg" alt="ice cream" width="132">
         <ul class="modal-energy list">
             <li class="modal-energy__item">
                 <p class="modal-energy__val"><span>320</span></p>
@@ -168,6 +180,6 @@
         <p class="modal-window__header">How it’s made?</p>
         <div class="modal-map" id="map">
         </div>
-        <button type="submit" class="modal-btn" name="submit_btn_location" value="Location_modals">Open map</button>
+            <a class="modal-btn__link link" href="https://goo.gl/maps/7zt89sniHsoEWSrH8" rel="nofollow noopener noreferrer" target="_blank">Open map</a>
     </div>
 </div>
