@@ -107,10 +107,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
-    &:hover {
-      scale: 0.9;
-    }
     &:focus {
       scale: 1.1;
     }
@@ -123,7 +123,6 @@
   }
 
   &__social-link:hover &__social-icon {
-    transform: scale(0.9);
     fill: $main-text-color;
   }
   &__social-link:focus &__social-icon {
