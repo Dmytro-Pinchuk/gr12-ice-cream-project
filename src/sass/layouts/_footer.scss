@@ -1,22 +1,40 @@
 .footer {
+  position: relative;
   background-color: $main-body-color;
   @include desktop {
   }
   &__container {
+    max-width: 480px;
     margin-top: -1px;
+    padding-bottom: 62px;
     @include tablet {
-      display: flex;
-      padding: 0 32px;
+      max-width: 768px;
+      padding: 0 32px 13px 32px;
     }
     @include desktop {
-      padding: 0 16px;
+      max-width: 1200px;
+      padding: 0 16px 11px 16px;
+      position: relative;
+    }
+  }
+  &__content {
+    margin-bottom: 56px;
+    @include tablet {
+      align-items: flex-end;
+      display: flex;
+      margin-bottom: 46px;
+    }
+    @include desktop {
+      margin-bottom: 66px;
     }
   }
 
   &__title {
     max-width: 234px;
+    margin-bottom: 42px;
     @include tablet {
       min-width: 352px;
+      margin-bottom: 0;
     }
     @include desktop {
       min-width: 504px;
@@ -42,7 +60,6 @@
     }
   }
   &__title-two {
-    margin-bottom: 42px;
     font-weight: 700;
     font-size: 34px;
     line-height: 1.21;
@@ -50,33 +67,35 @@
     text-transform: uppercase;
     color: $main-text-color;
     @include tablet {
-      margin-bottom: 32px;
       font-size: 48px;
       line-height: 1.23;
       letter-spacing: 0.06em;
     }
     @include desktop {
-      margin-bottom: 54px;
       font-size: 58px;
       line-height: 1.22;
     }
   }
   &__social {
     margin-left: auto;
+    @include tablet {
+      padding-bottom: 24px;
+    }
+    @include desktop {
+      padding-bottom: 0;
+    }
   }
+
   &__social-list {
-    margin-top: 12px;
     margin-bottom: 38px;
     display: flex;
     justify-content: right;
     gap: 28px;
     @include tablet {
       gap: 30px;
-      margin-top: 68px;
       margin-bottom: 32px;
     }
     @include desktop {
-      margin-top: 12px;
       margin-bottom: 40px;
     }
   }
@@ -90,12 +109,10 @@
     align-items: center;
 
     &:hover {
-      width: 32px;
-      height: 32px;
+      scale: 0.9;
     }
     &:focus {
-      width: 35px;
-      height: 35px;
+      scale: 1.1;
     }
   }
   &__social-icon {
@@ -115,7 +132,6 @@
   }
   &__social-text,
   &__social-tel-link {
-    margin-bottom: 40px;
     font-weight: 700;
     font-size: 12px;
     line-height: 1.8;
@@ -136,27 +152,17 @@
   &__social-tel-link {
     color: $main-text-color;
   }
-  &__bottom {
-    padding-top: 16px;
-    padding-bottom: 62px;
-    border-top: 1px solid #e1e1e1;
-    @include tablet {
-      padding-top: 14px;
-      padding-bottom: 13px;
-    }
-    @include desktop {
-      padding-top: 12px;
-      padding-bottom: 11px;
-    }
-  }
+
   &__bottom-text {
-    padding-left: 60px;
-    padding-right: 60px;
+    margin: 0 auto;
     text-align: center;
     font-weight: 700;
     font-size: 14px;
     line-height: 1.5;
     color: #7a7a7a;
+    @media screen and (max-width: 767px) {
+      width: 150px;
+    }
     @include tablet {
       line-height: 1.86;
       letter-spacing: 0.02em;
@@ -164,6 +170,21 @@
     @include desktop {
       font-size: 12px;
       line-height: 1.83;
+    }
+  }
+  &__border--position {
+    position: absolute;
+    width: 100vw;
+    left: 0;
+    bottom: 120px;
+    border-bottom: 1px solid #e1e1e1;
+    @include tablet {
+      bottom: 53px;
+    }
+    @include desktop {
+      max-width: 1167px;
+      bottom: 45px;
+      left: 16px;
     }
   }
 }
