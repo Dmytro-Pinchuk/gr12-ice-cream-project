@@ -268,11 +268,9 @@
 .navigation {
   display: none;
   @include desktop {
-<<<<<<< HEAD
     width: 1200px;
     padding-top: 8px;
     padding-bottom: 0px;
-=======
     display: block;
   }
   &__list {
@@ -295,7 +293,6 @@
     &:focus {
       color: $second-body-color;
     }
->>>>>>> main
   }
 }
 
