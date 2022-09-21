@@ -258,6 +258,15 @@
     justify-content: space-between;
     padding-top: 20px;
     align-items: center;
+    @include mobile {
+      width: 480px;
+    }
+    @include tablet {
+      width: 768px;
+    }
+    @include desktop {
+      width: 1200px;
+    }
   }
   &__buttons {
     height: 100%;
@@ -312,7 +321,7 @@
       width: 60px;
       height: 67px;
     }
-    margin: 5px;
+    // margin: 5px;
     // margin-top: 20px;
   }
 }
