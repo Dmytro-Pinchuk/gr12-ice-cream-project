@@ -265,7 +265,7 @@
         rgba(230, 194, 65, 0.7)
       ),
       #d9d9d9;
-    box-shadow: 0px 5.40397px 20.2649px rgba(153, 114, 23, 0.25);
+    // box-shadow: 0px 5.40397px 20.2649px rgba(153, 114, 23, 0.25);
     background-image: url(../images/products/ice-coffee-mob-1px.jpg);
     box-shadow: 0.5px 11.32px 0px rgb(222 182 46 / 70%);
     border-radius: 50%;
@@ -285,7 +285,7 @@
       width: 200px;
       height: 197px;
       background-image: url(../images/products/ice-coffee-tab-1px.jpg);
-      box-shadow: 0.5px 11.15px 0px rgb(228 190 56 / 70%);
+      box-shadow: 0.5px 11.15px 0px rgb(222 182 46 / 70%);
       left: 50%;
         top: 50%;
         transform: translate(-50%, -160%);
@@ -293,14 +293,14 @@
         (min-resolution: 192dpi),
         (min-resolution: 2dppx) {
         background-image: url(../images/products/ice-cofee-tab-2px.jpg);
-        box-shadow: 0.5px 11.15px 0px rgba(248, 210, 78, 0.7);
+        box-shadow: 0.5px 11.15px 0px rgb(222 182 46 / 70%);
       }
     }
     @include desktop {
       width: 301px;
       height: 300px;
       background-image: url(../images/products/ice-coffee-dt-1px.jpg);
-      box-shadow: 0.5px 17.02px 0px rgba(248, 210, 78, 0.7);
+      box-shadow: 0.5px 17.02px 0px rgb(222 182 46 / 70%);
       left: 50%;
         top: 50%;
         transform: translate(-50%, -155%);
@@ -308,7 +308,7 @@
         (min-resolution: 192dpi),
         (min-resolution: 2dppx) {
         background-image: url(../images/products/ice-coffee-dt-2px.jpg);
-        box-shadow: 0.5px 17.02px 0px rgba(248, 210, 78, 0.7);
+        box-shadow: 0.5px 11.15px 0px rgb(222 182 46 / 70%);
       }
     }
   }
