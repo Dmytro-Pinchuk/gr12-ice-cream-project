@@ -289,6 +289,12 @@
             0px 2px 1px rgba(0, 0, 0, 0.2);
         }
 
+        &-item {
+            @media screen and (min-width: 768px) {
+                margin-right: 16px;
+            }
+        }
+
         &--location {
             margin-bottom: 16px;
             background-color: $button-color;
@@ -310,7 +316,7 @@
 
             @include tablet {
                 @media screen and (min-width: 768px) {
-                    margin-right: 16px;
+                    
                     margin-bottom: 0;
                 }
             }

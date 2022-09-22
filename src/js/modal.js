@@ -1,8 +1,9 @@
 (() => {
 
     const modal_refs = {
-            openModalBtn1: document.querySelectorAll(".btn-buy"),
-            //openModalBtn2: document.querySelector("#open-madal-2"),
+            openModalBtn1: document.querySelectorAll(".mob-menu__btn"),
+            openModalBtn1_1: document.querySelectorAll(".buy-now__btn"),
+            openModalBtn2: document.querySelectorAll(".products__btn"),
             openModalBtn3: document.querySelectorAll(".contacts__button--franchise"),
             openModalBtn4: document.querySelectorAll(".about__btn"),
             openModalBtn5: document.querySelectorAll(".contacts__button--location"),
@@ -13,32 +14,38 @@
 
         for(let i=0;i<modal_refs.openModalBtn1.length;i++)
         {
-            console.log(modal_refs.openModalBtn1.length)
             modal_refs.openModalBtn1[i].value="buy_now_form";
             modal_refs.openModalBtn1[i].addEventListener("click",toggleModal);
         }
-        for(let i=0;i<modal_refs.openModalBtn5.length;i++)
+        for(let i=0;i<modal_refs.openModalBtn1_1.length;i++)
+        {
+            modal_refs.openModalBtn1_1[i].value="buy_now_form";
+            modal_refs.openModalBtn1_1[i].addEventListener("click",toggleModal);
+        }
+        for(let i=0;i<modal_refs.openModalBtn2.length;i++)
         {   
-            console.log(modal_refs.openModalBtn5.length)
+            modal_refs.openModalBtn2[i].value="modal_ingredients";
+            modal_refs.openModalBtn2[i].addEventListener("click", toggleModal);
+        }
+        for(let i=0;i<modal_refs.openModalBtn3.length;i++)
+        {   
+
             modal_refs.openModalBtn3[i].value="franchise_modal";
             modal_refs.openModalBtn3[i].addEventListener("click", toggleModal);
         }
-        for(let i=0;i<modal_refs.openModalBtn5.length;i++)
+        for(let i=0;i<modal_refs.openModalBtn4.length;i++)
         {   
-            console.log(modal_refs.openModalBtn5.length)
             modal_refs.openModalBtn4[i].value="read_more_modal";
             modal_refs.openModalBtn4[i].addEventListener("click", toggleModal);
         }
         for(let i=0;i<modal_refs.openModalBtn5.length;i++)
         {   
-            console.log(modal_refs.openModalBtn5.length)
             modal_refs.openModalBtn5[i].value="our_location_modal";
             modal_refs.openModalBtn5[i].addEventListener("click", toggleModal);
         }
-            //modal_refs.openModalBtn2.addEventListener("click", toggleModal);
             
     
-            console.log(modal_refs.closeModalBtn.length);
+
     
             for(let i=0;i<modal_refs.closeModalBtn.length;i++)
             {   
@@ -48,7 +55,6 @@
     
         function toggleModal()
         {
-            console.log(this.value);
             modal_refs.modal.classList.toggle("modal-is-hidden");
             document.querySelector("#"+this.value).classList.toggle("modal-is-hidden");
         }

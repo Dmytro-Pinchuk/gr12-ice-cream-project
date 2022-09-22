@@ -1,7 +1,11 @@
 <!--modal-form---buy now-->
 <div class="modal-backdrop modal-is-hidden" id="modal-backdrop">
     <div class="modal-window modal-is-hidden modal-window--buy-now-padding" id="buy_now_form">
-        <button id="close-btn-buy_now" name="close_btn_buy_now" class="modal-window__close-btn" value="buy_now_form">x</button>
+        <button id="close-btn-buy_now" name="close_btn_buy_now" class="modal-window__close-btn" value="buy_now_form">
+            <svg class="" width="20" height="20">
+                <use href="./images/icons.svg#icon-chrose"></use>
+            </svg>
+        </button>
         <p class="modal-window__header modal-window__header--margin-buy-now">Buy now</p>
         <form name="buy_now">
             <ul class="modal-product list">
@@ -9,7 +13,11 @@
                     <input class="modal-product__check" type="checkbox" id="cream" name="product_cream">
                     <label class="modal-product__checkbox modal-product__checkbox--color-green" for="cream">
                     <span class="modal-product-image__container">
-                        <img class="modal-product-image modal-product-image--absolute-position" src="./images/modal/buy-now/cream-m.jpg" alt="ice cream" width="132">
+                        <picture>
+                            <source srcset="./images/modal/buy-now/cream-m.jpg 1x, ./images/modal/buy-now/cream-m-2x.jpg 2x" media="(max-width:767px)">
+                            <source srcset="./images/modal/buy-now/cream-m.jpg 1x, ./images/modal/buy-now/cream-m-2x.jpg 2x" media="(min-width:768px)">
+                            <img class="modal-product-image modal-product-image--absolute-position" src="./images/modal/buy-now/cream-m.jpg" alt="ice cream" width="132">
+                        </picture>
                     </span>
                         <span class="modal-product__name">Ice cream</span>
                     </label>
@@ -18,7 +26,11 @@
                     <input class="modal-product__check" type="checkbox" id="cofee" name="product_cofee">
                     <label class="modal-product__checkbox modal-product__checkbox--color-yellow" for="cofee">
                     <span class="modal-product-image__container">
-                        <img class="modal-product-image modal-product-image--color-yellow modal-product-image--absolute-position" src="./images/modal/buy-now/cofee-m.jpg" alt="ice cream" width="132">
+                        <picture>
+                            <source srcset="./images/modal/buy-now/cofee-m.jpg 1x, ./images/modal/buy-now/cofee-m-2x.jpg 2x" media="(max-width:767px)">
+                            <source srcset="./images/modal/buy-now/cofee-m.jpg 1x, ./images/modal/buy-now/cofee-m-2x.jpg 2x" media="(min-width:768px)">
+                            <img class="modal-product-image modal-product-image--absolute-position" src="./images/modal/buy-now/cream-m.jpg" alt="ice cream" width="132">
+                        </picture>
                     </span>
                         <span class="modal-product__name">Ice coffee</span>
                     </label>
@@ -27,7 +39,11 @@
                     <input class="modal-product__check" type="checkbox" id="milkshake" name="product_milkshake">
                     <label class="modal-product__checkbox modal-product__checkbox--color-brown" for="milkshake">
                     <span class="modal-product-image__container">
-                        <img class="modal-product-image modal-product-image--color-brown modal-product-image--absolute-position" src="./images/modal/buy-now/milkshake-m.jpg" alt="ice cream" width="132">
+                        <picture>
+                            <source srcset="./images/modal/buy-now/milkshake-m.jpg 1x, ./images/modal/buy-now/milkshake-m-2x.jpg 2x" media="(max-width:767px)">
+                            <source srcset="./images/modal/buy-now/milkshake-m.jpg 1x, ./images/modal/buy-now/milkshake-m-2x.jpg 2x" media="(min-width:768px)">
+                            <img class="modal-product-image modal-product-image--color-brown modal-product-image--absolute-position" src="./images/modal/buy-now/milkshake-m.jpg" alt="ice cream" width="132">
+                        </picture>
                     </span>
                         <span class="modal-product__name">Milkshake</span>
                     </label>
@@ -49,9 +65,13 @@
     </div>
     <!--Modal ingredients-->
     <div class="modal-window modal-is-hidden modal-window--ingradients-padding" id="modal_ingredients">
-        <button id="close-btn-ingradients" class="modal-window__close-btn" value="modal_ingredients">x</button>
+        <button id="close-btn-ingradients" class="modal-window__close-btn" value="modal_ingredients">
+            <svg class="" width="20" height="20">
+                <use href="./images/icons.svg#icon-chrose"></use>
+            </svg>
+        </button>
         <p class="modal-window__header modal-window__header--ingredients-margin">Chololate icecream</p>
-        <img class="modal-product-image modal-product-image--add-margin-bottom" src="./images/modal/buy-now/cream-t.jpg" alt="ice cream" width="132">
+        <img class="modal-product-image modal-product-image--add-margin-bottom" srcset="./images/modal/ingredients/img-1-full.jpg 1x, ./images/modal/ingredients/img-1-full-2x.jpg 2x" src="./images/modal/ingredients/img-1-full.jpg" alt="ice cream" width="132">
         <ul class="modal-energy list">
             <li class="modal-energy__item">
                 <p class="modal-energy__val"><span>320</span></p>
@@ -108,7 +128,11 @@
     </div>
     <!--  Franchise-modal -->
     <div class="modal-window modal-is-hidden" id="franchise_modal">
-        <button id="close-btn-franchise" class="modal-window__close-btn" value="franchise_modal">x</button>
+        <button id="close-btn-franchise" class="modal-window__close-btn" value="franchise_modal">
+           <svg class="" width="20" height="20">
+            <use href="./images/icons.svg#icon-chrose"></use>
+           </svg> 
+        </button>
         <p class="modal-window__header">Thank you for your interest in owning an Ice Cream shop</p>
         <p class="modal-window__main-text">
             Due to the overwhelming volume of franchise requests we are not accepting new franchisee applications at this time. Once the application process resumes, we will contact you for further information. Please fill out the contact information below and we will reach out for additional information. We appreciate your patience.
@@ -133,7 +157,11 @@
     </div>
     <!--Read-more-modal-->
     <div class="modal-window modal-is-hidden" id="read_more_modal">
-        <button id="close-btn-read" class="modal-window__close-btn" value="read_more_modal">x</button>
+        <button id="close-btn-read" class="modal-window__close-btn" value="read_more_modal">
+            <svg class="" width="20" height="20">
+                <use href="./images/icons.svg#icon-chrose"></use>
+            </svg>
+        </button>
         <p class="modal-window__header">How it’s made?</p>
         <p class="modal-window__media-content">
             <video class="modal-video-window" width="224" height="199" controls="controls" poster="#">
@@ -148,10 +176,14 @@
     </div>
     <!--Our-location-modal-->
     <div class="modal-window modal-is-hidden" id="our_location_modal">
-        <button id="close-btn-location" class="modal-window__close-btn" value="our_location_modal">x</button>
+        <button id="close-btn-location" class="modal-window__close-btn" value="our_location_modal">
+            <svg class="" width="20" height="20">
+                <use href="./images/icons.svg#icon-chrose"></use>
+            </svg>
+        </button>
         <p class="modal-window__header">How it’s made?</p>
         <div class="modal-map" id="map">
         </div>
-        <button type="submit" class="modal-btn" name="submit_btn_location" value="Location_modals">Open map</button>
+            <a class="modal-btn__link link" href="https://goo.gl/maps/7zt89sniHsoEWSrH8" rel="nofollow noopener noreferrer" target="_blank">Open map</a>
     </div>
 </div>
